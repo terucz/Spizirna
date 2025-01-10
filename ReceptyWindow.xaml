@@ -1,0 +1,25 @@
+﻿<Window x:Class="PAPSpizirnaProjekt.GUI.ReceptyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PAPSpizirnaProjekt.GUI"
+        mc:Ignorable="d"
+        Title="ReceptyWindow" Height="450" Width="800">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="399" Margin="0,10,413,0" VerticalAlignment="Top" Width="369">
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="119,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="Přístupné recepty"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="399" Margin="0,10,10,0" VerticalAlignment="Top" Width="359">
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="147,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Text="Neřístupné recepty"/>
+        </Border>
+        <ListBox x:Name="pristupnerecepty" HorizontalAlignment="Left" Height="335" VerticalAlignment="Top" Width="369" Margin="10,74,0,0">
+            <ScrollBar Height="324" Width="5"/>
+        </ListBox>
+        <ListBox  x:Name="nepristupne recepty" HorizontalAlignment="Left" Height="335" VerticalAlignment="Top" Width="369" Margin="423,74,0,0">
+            <ScrollBar Height="325"/>
+        </ListBox>
+        <Button x:Name="prepinacNaJidlo" Content="Jídlo" HorizontalAlignment="Left" Height="42" Margin="282,20,0,0" VerticalAlignment="Top" Width="237" Click="prepinacNaJidlo_Click"/>
+        <Button x:Name="pridatrecept" Content="+" HorizontalAlignment="Left" Height="30" Margin="385,67,0,0" VerticalAlignment="Top" Width="30" Click="pridaniReceptu_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="PAPSpizirnaProjekt.GUI.PridaniReceptu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PAPSpizirnaProjekt.GUI"
+        mc:Ignorable="d"
+        Title="PridaniReceptu" Height="351.91" Width="740.337">
+    <Grid Margin="0,0,2,0">
+        <StackPanel HorizontalAlignment="Left" Height="77" Margin="2,0,-97,0" VerticalAlignment="Top" Width="95">
+            <TextBlock HorizontalAlignment="Left" Margin="5,10,-76,0" TextWrapping="Wrap" Text="Název" VerticalAlignment="Top" Width="36"/>
+            <TextBlock HorizontalAlignment="Left" Margin="5,30,-109,0" TextWrapping="Wrap" Text="Instrukce" VerticalAlignment="Top" Width="49"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="272" Margin="102,0,0,0" VerticalAlignment="Top" Width="217">
+            <TextBox x:Name="nazev" Height="23" TextWrapping="Wrap" Margin="5,8,0,0" Text="Název receptu"/>
+            <TextBox x:Name="postup" Height="208" TextWrapping="Wrap" Margin="5,23,0,0" Text="Popis postupu"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="272" Margin="344,0,0,0" VerticalAlignment="Top" Width="376">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" Margin="5,10,0,0" TextWrapping="Wrap" Text="Nová ingredience" VerticalAlignment="Top" Width="96"/>
+                <TextBox x:Name="novaingrediencenazev" Height="22" TextWrapping="Wrap" Text="Název" Width="131" Margin="10,10,0,0"/>
+                <TextBox x:Name="novaingrediencemnozstvi" Height="22" TextWrapping="Wrap" Text="Množství" Width="56" Margin="10,10,0,0"/>
+                <TextBox x:Name="novaingrediencejednotka" Height="22" TextWrapping="Wrap" Text="Jednotka" Width="56" Margin="10,10,0,0"/>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" Margin="5,30,0,0" TextWrapping="Wrap" Text="List ingrediencí" VerticalAlignment="Top" Width="83"/>
+            <ListView  x:Name="listIngredienci" Height="181">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </StackPanel>
+        <Button Content="Uložit" HorizontalAlignment="Left" Margin="609,291,0,0" VerticalAlignment="Top" Width="111" Click="novyRecept_Click" />
+
+    </Grid>
+</Window>

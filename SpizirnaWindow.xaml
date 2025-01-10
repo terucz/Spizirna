@@ -1,0 +1,34 @@
+﻿<Window x:Class="PAPSpizirnaProjekt.GUI.SpizirnaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PAPSpizirnaProjekt.GUI"
+        mc:Ignorable="d"
+        Title="SpizirnaWindow" Height="450" Width="800">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="399" Margin="0,10,413,0" VerticalAlignment="Top" Width="369">
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="172,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="25" Text="Spíž" RenderTransformOrigin="0.991,0.693"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="399" Margin="0,10,10,0" VerticalAlignment="Top" Width="359">
+            <TextBlock TextWrapping="Wrap" Text="Nákupní seznam" Margin="136,20,129,360" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.095"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Border>
+        <ListBox x:Name="spizirna" HorizontalAlignment="Left" Height="335" VerticalAlignment="Top" Width="369" Margin="10,74,0,0">
+            <ScrollBar Height="324" Width="5"/>
+        </ListBox>
+        <ListBox  x:Name="nakupniList" HorizontalAlignment="Left" Height="335" VerticalAlignment="Top" Width="369" Margin="423,74,0,0">
+            <ScrollBar Height="325"/>
+        </ListBox>
+        <Button x:Name="prepinacNaRecepty" Content="Recepty" HorizontalAlignment="Left" Height="42" Margin="282,20,0,0" VerticalAlignment="Top" Width="237" Click="prepinacNaRecepty_Click"/>
+        <Button x:Name="pridatpotravinu" Content="+" HorizontalAlignment="Left" Height="30" Margin="385,67,0,0" VerticalAlignment="Top" Width="30" Click="pridaniPotraviny_Click" />
+    </Grid>
+</Window>
